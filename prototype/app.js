@@ -755,8 +755,6 @@
     body: `
       <div class="welcome">
         <h2 class="welcome__title" id="stepTitle">Welcome! Create your account</h2>
-        <p class="welcome__for">${ICON.tick.replace('<svg', '<svg class="welcome__tick"')} ${esc(prettyPhone(S.country, S.number))}
-          <button type="button" class="link-btn" id="changeNum">Change</button></p>
       </div>
       <div id="formAlert"></div>
       <form id="stepForm" novalidate>
@@ -791,7 +789,6 @@
       bindName(last, $('#lastErr'), 'last');
       bindEmail(email, $('#emailErr'), $('#emailSuggest'));
       bindConsent($('#stepForm'), 'su', S.consent);
-      $('#changeNum').addEventListener('click', () => { S = keepEntry(); go('phone', { focus: '#phoneInput' }); });
 
       $('#stepForm').addEventListener('submit', async (e) => {
         e.preventDefault();
