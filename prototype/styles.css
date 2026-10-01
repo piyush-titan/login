@@ -553,3 +553,15 @@ body.dlg-open .demo details:not([open]) { opacity: .85; }
   .dlg__foot > .legal { white-space: nowrap; letter-spacing: -.02em; }
   .dlg__foot > .legal a { font-weight: 500; }
 }
+
+/* Desktop: one static dialog height for every step. Shorter steps sit centred in the panel
+   (no gap between content and CTA); taller steps scroll in the body while the CTA stays pinned. */
+@media (min-width: 900px) {
+  .dlg {
+    height: min(640px, calc(100vh - 48px));
+    height: min(640px, calc(100dvh - 48px));
+    min-height: 0; max-height: none;
+  }
+  .dlg__body { flex: 0 1 auto; min-height: 0; margin-top: auto; }
+  .dlg__foot { margin-bottom: auto; }
+}
