@@ -610,3 +610,6 @@ body.dlg-open .demo details:not([open]) { opacity: .85; }
 @media (min-width: 900px) {
   #phConsentWrap > .consent { padding-top: 4px; }
 }
+
+/* Success: note matches the line above it */
+.consent__note { font-size: 15px; margin-top: 0; }
