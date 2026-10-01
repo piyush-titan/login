@@ -543,3 +543,13 @@ body.dlg-open .demo details:not([open]) { opacity: .85; }
   .dlg__foot > .legal { max-width: none; white-space: nowrap; letter-spacing: -.02em; }
   .dlg__foot > .legal a { font-weight: 500; }
 }
+
+/* Desktop: fixed-width form column so text never reflows with screen size, zoom or scaling.
+   The image card absorbs the difference. */
+@media (min-width: 900px) {
+  .dlg__media { flex: 1 1 auto; min-width: 0; }
+  .dlg__panel { flex: 0 0 488px; }
+  .dlg__body > *, .dlg__foot > * { max-width: none; }
+  .dlg__foot > .legal { white-space: nowrap; letter-spacing: -.02em; }
+  .dlg__foot > .legal a { font-weight: 500; }
+}
