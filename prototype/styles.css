@@ -536,3 +536,10 @@ body.dlg-open .demo details:not([open]) { opacity: .85; }
 
 /* Consent block and acknowledgement share one text size */
 .consent__title, .check:not(.check--remember), .pill, .channels__q, .consent .msg, .legal { font-size: 11px; }
+
+/* Acknowledgement: one line wherever the panel is wide enough at 11px */
+.dlg__foot { container-type: inline-size; }
+@container (min-width: 414px) {
+  .dlg__foot > .legal { max-width: none; white-space: nowrap; letter-spacing: -.02em; }
+  .dlg__foot > .legal a { font-weight: 500; }
+}
