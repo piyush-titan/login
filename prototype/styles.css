@@ -530,3 +530,9 @@ body.dlg-open .demo details:not([open]) { opacity: .85; }
 @media (max-width: 599px) and (max-height: 640px) {
   .dlg[data-step="phone"] .dlg__banner { border-radius: 0; }
 }
+
+/* Phone step: title sits directly above the number field */
+.dlg[data-step="phone"] .prompt { margin-bottom: 18px; }
+
+/* Consent block and acknowledgement share one text size */
+.consent__title, .check:not(.check--remember), .pill, .channels__q, .consent .msg, .legal { font-size: 11px; }
