@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2025-09-30T13:30:00Z",
+  "title": "Design System: Mia by Tanishq · Sign In / Sign Up",
+  "extensions": {
+    "colorMeta": {
+      "rose-primary":    { "role": "primary", "displayName": "Mia Rose", "canonical": "#D14A61", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "rose-pressed":    { "role": "primary", "displayName": "Rose Pressed", "canonical": "#C4435A", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "rose-ink":        { "role": "primary", "displayName": "Rose Ink", "canonical": "#B23A50", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "blush-50":        { "role": "primary", "displayName": "Blush 50", "canonical": "#FCF1F3", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "blush-100":       { "role": "primary", "displayName": "Blush 100", "canonical": "#F7DDE3", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "blush-200":       { "role": "primary", "displayName": "Blush 200", "canonical": "#EFBFCA", "tonalRamp": ["#5E1F2A", "#8A2C3D", "#B23A50", "#C4435A", "#D14A61", "#EFBFCA", "#F7DDE3", "#FCF1F3"] },
+      "mauve-text":      { "role": "neutral", "displayName": "Mauve Text", "canonical": "#4A4447", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "mauve-muted":     { "role": "neutral", "displayName": "Mauve Muted", "canonical": "#6E676B", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "mauve-faint":     { "role": "neutral", "displayName": "Mauve Faint", "canonical": "#8F888C", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "hairline":        { "role": "neutral", "displayName": "Hairline", "canonical": "#E6E1E3", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "hairline-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "#CFC8CB", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "pearl":           { "role": "neutral", "displayName": "Pearl", "canonical": "#F7F5F6", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "white":           { "role": "neutral", "displayName": "White", "canonical": "#FFFFFF", "tonalRamp": ["#2E2A2C", "#4A4447", "#6E676B", "#8F888C", "#CFC8CB", "#E6E1E3", "#F7F5F6", "#FFFFFF"] },
+      "error":           { "role": "error", "displayName": "Error", "canonical": "#B42318", "tonalRamp": ["#55110B", "#7A1912", "#B42318", "#D92D20", "#F04438", "#FDA29B", "#FEE4E2", "#FEF3F2"] },
+      "error-wash":      { "role": "error", "displayName": "Error Wash", "canonical": "#FEF3F2", "tonalRamp": ["#55110B", "#7A1912", "#B42318", "#D92D20", "#F04438", "#FDA29B", "#FEE4E2", "#FEF3F2"] },
+      "success":         { "role": "success", "displayName": "Success", "canonical": "#2F7A57", "tonalRamp": ["#123324", "#1E4F38", "#2F7A57", "#3E9A6F", "#6DBB93", "#A9D9BF", "#D6EEE1", "#F0F9F4"] }
+    },
+    "typographyMeta": {
+      "headline":  { "displayName": "Prompt", "purpose": "The single serif question on each step and the success title. One per screen; receives focus on step change." },
+      "body":      { "displayName": "Body", "purpose": "Default text; button labels at weight 600." },
+      "body-sub":  { "displayName": "Sub", "purpose": "The one supporting line under the prompt, in Mauve Muted." },
+      "label":     { "displayName": "Label", "purpose": "Field labels, consent titles, chip values." },
+      "caption":   { "displayName": "Caption", "purpose": "Hints, consent notes, legal line, save state." },
+      "input":     { "displayName": "Input", "purpose": "Values typed into fields and the country select." },
+      "otp-digit": { "displayName": "OTP Digit", "purpose": "One tabular digit per OTP slot." }
+    },
+    "shadows": [
+      { "name": "dialog-float", "value": "0 24px 64px rgba(110, 103, 107, .22)", "purpose": "The auth dialog only." },
+      { "name": "menu-float", "value": "0 12px 32px rgba(110, 103, 107, .16)", "purpose": "Account dropdown and popovers." },
+      { "name": "scrim", "value": "rgba(110, 103, 107, .32)", "purpose": "Warm light overlay behind the dialog; never black." },
+      { "name": "focus-halo", "value": "0 0 0 3px #F7DDE3", "purpose": "Focused field, select or active OTP slot, paired with a Mia Rose border." },
+      { "name": "focus-halo-error", "value": "0 0 0 3px #FEF3F2", "purpose": "Focused field in an invalid state." },
+      { "name": "divider-inset", "value": "inset 0 1px 0 #E6E1E3", "purpose": "Hairline rule above the consent block without affecting layout." }
+    ],
+    "motion": [
+      { "name": "ease-concierge", "value": "cubic-bezier(.2, .8, .2, 1)", "purpose": "The single easing curve for every entrance." },
+      { "name": "step-rise", "value": "rise 260ms (opacity 0, translateY 8px → rest); chips 220ms", "purpose": "New step content and new trail chips." },
+      { "name": "dialog-pop", "value": "pop 260ms (opacity 0, -48% y, scale .985 → rest)", "purpose": "Desktop dialog entrance." },
+      { "name": "sheet-slide", "value": "sheet 300ms (translateY 100% → 0)", "purpose": "Phone bottom-sheet entrance." },
+      { "name": "tick-draw", "value": "stroke-dashoffset 30 → 0, 500ms, 100ms delay", "purpose": "Success tick draws itself." },
+      { "name": "state-change", "value": "120–150ms colour, border, box-shadow", "purpose": "Hover, focus and selection transitions." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: all durations → .01ms; tick shown drawn", "purpose": "Mandatory accessibility collapse." }
+    ],
+    "breakpoints": [
+      { "name": "two-col-stack", "value": "380px" },
+      { "name": "sheet", "value": "599px" },
+      { "name": "sheet-full-height", "value": "599px wide and 640px tall" },
+      { "name": "storefront-nav", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one rose pill per screen, pinned in the dialog footer.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Get OTP</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; width: 100%; border-radius: 999px; border: 1px solid transparent; background: var(--pink, #D14A61); color: #fff; font: 600 16px/1.5 \"Figtree\", system-ui, sans-serif; letter-spacing: .01em; cursor: pointer; transition: background-color .15s, transform .1s; } .ds-btn-primary:hover { background: var(--pink-hover, #C4435A); } .ds-btn-primary:active { transform: scale(.99); } .ds-btn-primary:focus-visible { outline: 2px solid var(--pink, #D14A61); outline-offset: 2px; } .ds-btn-primary:disabled { background: #E6E1E3; color: #6E676B; cursor: not-allowed; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-stakes completion action on a white pill.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Done</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; width: 100%; border-radius: 999px; border: 1px solid var(--line-strong, #CFC8CB); background: #fff; color: var(--text, #4A4447); font: 600 16px/1.5 \"Figtree\", system-ui, sans-serif; letter-spacing: .01em; cursor: pointer; transition: border-color .15s, color .15s; } .ds-btn-ghost:hover { border-color: var(--pink, #D14A61); color: var(--pink-ink, #B23A50); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--pink, #D14A61); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Button",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Quiet Rose Ink escape or secondary action.",
+      "html": "<button class=\"ds-btn-text\" type=\"button\">Stay on this page</button>",
+      "css": ".ds-btn-text { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; border: 0; background: none; color: var(--pink-ink, #B23A50); font: 600 16px/1.5 \"Figtree\", system-ui, sans-serif; cursor: pointer; } .ds-btn-text:hover { color: var(--pink, #D14A61); text-decoration: underline; text-underline-offset: 3px; } .ds-btn-text:focus-visible { outline: 2px solid var(--pink, #D14A61); outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Labelled 52px field with rose border and blush halo on focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field__label\">First name</span><input class=\"ds-input\" placeholder=\"e.g. Priya\"></label>",
+      "css": ".ds-field { display: block; font-family: \"Figtree\", system-ui, sans-serif; color: #4A4447; } .ds-field__label { display: block; margin: 0 0 6px; font-size: 14px; font-weight: 600; } .ds-input { width: 100%; box-sizing: border-box; min-height: 52px; padding: 0 16px; border-radius: 14px; border: 1px solid var(--line-strong, #CFC8CB); background: #fff; font: 400 17px \"Figtree\", system-ui, sans-serif; color: #4A4447; transition: border-color .15s, box-shadow .15s; } .ds-input::placeholder { color: #8F888C; } .ds-input:hover { border-color: #8F888C; } .ds-input:focus { outline: none; border-color: var(--pink, #D14A61); box-shadow: 0 0 0 3px var(--pink-100, #F7DDE3); }"
+    },
+    {
+      "name": "OTP Slots",
+      "kind": "input",
+      "refersTo": "otp-slot",
+      "description": "Six tabular slots; the active one carries focus treatment and a rose caret.",
+      "html": "<div class=\"ds-otp\"><span class=\"ds-otp__slot\">1</span><span class=\"ds-otp__slot\">2</span><span class=\"ds-otp__slot ds-otp__slot--active\"></span><span class=\"ds-otp__slot\"></span><span class=\"ds-otp__slot\"></span><span class=\"ds-otp__slot\"></span></div>",
+      "css": ".ds-otp { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; max-width: 420px; } .ds-otp__slot { height: 58px; display: grid; place-items: center; border-radius: 14px; border: 1px solid #CFC8CB; background: #fff; font: 500 24px/1 \"Figtree\", system-ui, sans-serif; font-variant-numeric: tabular-nums; color: #4A4447; } .ds-otp__slot--active { border-color: #D14A61; box-shadow: 0 0 0 3px #F7DDE3; } .ds-otp__slot--active:empty::after { content: \"\"; width: 2px; height: 26px; background: #D14A61; animation: ds-blink 1s steps(2) infinite; } @keyframes ds-blink { 50% { opacity: 0; } }"
+    },
+    {
+      "name": "Answer Chip",
+      "kind": "chip",
+      "refersTo": "answer-chip",
+      "description": "An answered step collapsed into the trail, with a tick and an edit control.",
+      "html": "<span class=\"ds-chip\"><svg viewBox=\"0 0 24 24\" class=\"ds-chip__tick\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg><span class=\"ds-chip__label\">Mobile</span><span class=\"ds-chip__value\">+91 98765 43210</span><button class=\"ds-chip__edit\" type=\"button\" aria-label=\"Edit mobile\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 20h4L19 9l-4-4L4 16v4z\"/></svg></button></span>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 4px 8px 4px 12px; border-radius: 999px; background: #F7F5F6; border: 1px solid #E6E1E3; font: 400 14px/1.4 \"Figtree\", system-ui, sans-serif; color: #4A4447; } .ds-chip svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; } .ds-chip__tick { width: 16px; height: 16px; color: #2F7A57; } .ds-chip__label { color: #6E676B; } .ds-chip__value { font-weight: 600; } .ds-chip__edit { display: inline-grid; place-items: center; width: 28px; height: 28px; margin: -2px 0; border-radius: 50%; border: 0; background: #fff; color: #B23A50; cursor: pointer; } .ds-chip__edit svg { width: 15px; height: 15px; } .ds-chip__edit:hover { background: #FCF1F3; } .ds-chip__edit:focus-visible { outline: 2px solid #D14A61; outline-offset: 2px; }"
+    },
+    {
+      "name": "Channel Pill",
+      "kind": "chip",
+      "refersTo": "channel-pill",
+      "description": "Consent channel toggle; selected turns blush with Rose Ink text.",
+      "html": "<label class=\"ds-pill\"><input type=\"checkbox\" checked> WhatsApp</label> <label class=\"ds-pill\"><input type=\"checkbox\"> Email</label>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px 0 10px; border-radius: 999px; border: 1px solid #CFC8CB; background: #fff; font: 500 14px \"Figtree\", system-ui, sans-serif; color: #4A4447; cursor: pointer; transition: border-color .12s, background-color .12s; } .ds-pill input { appearance: none; -webkit-appearance: none; margin: 0; width: 18px; height: 18px; border-radius: 5px; border: 1.5px solid #CFC8CB; background: #fff no-repeat center / 12px; cursor: pointer; } .ds-pill:hover input { border-color: #D14A61; } .ds-pill input:checked { background-color: #D14A61; border-color: #D14A61; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E\"); } .ds-pill:has(input:checked) { border-color: #D14A61; background: #FCF1F3; color: #B23A50; } .ds-pill input:focus-visible { outline: 2px solid #D14A61; outline-offset: 2px; }"
+    },
+    {
+      "name": "Choice Card",
+      "kind": "card",
+      "refersTo": "choice-card",
+      "description": "Radio card for a consequential either/or decision (email swap).",
+      "html": "<label class=\"ds-choice\"><input type=\"radio\" name=\"ds-c\" checked><span><span class=\"ds-choice__title\">Continue with *******3469</span><span class=\"ds-choice__desc\">We'll send an OTP to your original number.</span></span></label>",
+      "css": ".ds-choice { display: grid; grid-template-columns: 22px 1fr; gap: 14px; align-items: start; padding: 16px; border-radius: 14px; border: 1px solid #CFC8CB; background: #fff; cursor: pointer; font-family: \"Figtree\", system-ui, sans-serif; transition: border-color .15s, background-color .15s; } .ds-choice:hover { border-color: #EFBFCA; } .ds-choice:has(input:checked) { border-color: #D14A61; background: #FCF1F3; } .ds-choice input { appearance: none; -webkit-appearance: none; margin: 2px 0 0; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #CFC8CB; background: #fff; display: grid; place-items: center; cursor: pointer; } .ds-choice input:checked { border-color: #D14A61; } .ds-choice input:checked::after { content: \"\"; width: 10px; height: 10px; border-radius: 50%; background: #D14A61; } .ds-choice input:focus-visible { outline: 2px solid #D14A61; outline-offset: 3px; } .ds-choice__title { display: block; font-weight: 600; color: #4A4447; } .ds-choice__desc { display: block; margin-top: 2px; font-size: 14px; color: #6E676B; }"
+    },
+    {
+      "name": "Consent Checkbox",
+      "kind": "custom",
+      "refersTo": "consent-check",
+      "description": "Unticked-by-default consent row with a rose-filled checked state.",
+      "html": "<label class=\"ds-check\"><input type=\"checkbox\"><span>I consent to the use of my personal data to provide personalized recommendations, offers, and experiences based on my preferences and interactions.</span></label>",
+      "css": ".ds-check { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; padding: 4px 0; cursor: pointer; font: 400 14.5px/1.5 \"Figtree\", system-ui, sans-serif; color: #4A4447; max-width: 420px; } .ds-check input { appearance: none; -webkit-appearance: none; margin: 1px 0 0; width: 22px; height: 22px; border-radius: 6px; border: 1.5px solid #CFC8CB; background: #fff no-repeat center / 14px; cursor: pointer; transition: background-color .12s, border-color .12s; } .ds-check input:hover { border-color: #D14A61; } .ds-check input:checked { background-color: #D14A61; border-color: #D14A61; background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E\"); } .ds-check input:focus-visible { outline: 2px solid #D14A61; outline-offset: 2px; }"
+    },
+    {
+      "name": "Prompt Step",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "The concierge's voice: one serif question and one sub line.",
+      "html": "<div class=\"ds-step\"><h2 class=\"ds-prompt\">What’s your mobile number?</h2><p class=\"ds-sub\">We’ll text you a one-time code.</p></div>",
+      "css": ".ds-step { animation: ds-rise .26s cubic-bezier(.2, .8, .2, 1); } .ds-prompt { margin: 0 0 6px; font: 400 clamp(26px, 6.4vw, 30px)/1.15 \"Newsreader\", \"Iowan Old Style\", Georgia, serif; letter-spacing: -.01em; color: #4A4447; text-wrap: balance; } .ds-sub { margin: 0; font: 400 15px/1.5 \"Figtree\", system-ui, sans-serif; color: #6E676B; } @keyframes ds-rise { from { opacity: 0; transform: translateY(8px); } } @media (prefers-reduced-motion: reduce) { .ds-step { animation: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Concierge",
+    "overview": "The system behaves like a good jewellery-counter assistant: it asks one thing at a time, in a warm serif voice, remembers what you already said, and never raises its voice. Every screen is a single question set in Newsreader, answered in plain Figtree fields, and closed by one pill-shaped rose action pinned to the foot of the dialog. Answers do not vanish; they collapse into small pearl chips above the next question, each with its own edit control, so the conversation stays visible and reversible.\n\nThe world is entirely light. Surfaces are white, structure is drawn with warm mauve-grey hairlines, and the only colour with a voice is Mia rose (#D14A61) and its blush washes. Depth comes from soft, warm-grey shadows and a light mauve scrim, never from dark panels. Density is generous but not airy: 52px fields, 48px actions, 28px dialog gutters on desktop, 20px on the phone sheet.\n\nMotion is a single idea used in three places: the new step rises in, the phone sheet slides up, and the success tick draws itself. Everything else is a 120–150ms colour or border change. Reduced motion collapses all of it to instant.",
+    "keyCharacteristics": [
+      "One question per screen, serif prompt, sans everything else.",
+      "Answered steps persist as editable pill chips (the \"trail\").",
+      "Light-only palette: white, warm mauve-greys, one rose accent with blush tints.",
+      "Pill actions, 14px fields, 22px dialog corners.",
+      "Centered 480px dialog on desktop; bottom sheet under 600px; sticky footer CTA.",
+      "One motion vocabulary (rise, slide, draw) on a shared ease-out curve."
+    ],
+    "rules": [
+      { "name": "The No Dark Surfaces Rule", "body": "No background, panel, scrim or overlay may be darker than Pearl. Overlays use rgba(110,103,107,.32), never black. Mauve Text (#4A4447) is the darkest value that may appear, and only as text.", "section": "colors" },
+      { "name": "The Two Roses Rule", "body": "Mia Rose fills and strokes; Rose Ink speaks. Any rose text at 16px or below, and every link, uses Rose Ink. Hover may brighten Rose Ink to Mia Rose.", "section": "colors" },
+      { "name": "The One Accent Rule", "body": "Rose and its blush tints are the only hue. Selection, focus and confirmation are all expressed in rose; do not introduce a second accent for any state except error red and the small success green.", "section": "colors" },
+      { "name": "The One Serif Rule", "body": "Newsreader is reserved for the step prompt and the brand wordmark. Labels, buttons, chips, legal and every form element are Figtree.", "section": "typography" },
+      { "name": "The Tabular Numbers Rule", "body": "Phone numbers, OTP digits and countdown timers always set font-variant-numeric: tabular-nums so digits never jitter.", "section": "typography" },
+      { "name": "The Warm Shadow Rule", "body": "Every shadow and scrim is built from rgba(110,103,107,…). Black or cool-grey shadows are off-system.", "section": "elevation" },
+      { "name": "The Flat At Rest Rule", "body": "Cards, fields, chips and pills never carry a drop shadow; selection is shown with a rose border and blush wash.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do ask exactly one question per step, set in the Newsreader prompt, and move focus to it on every step change.",
+      "Do collapse every answered step into an editable Pearl chip in the trail above the current question.",
+      "Do keep a single Mia Rose (#D14A61) pill as the primary action, pinned in the sticky dialog footer.",
+      "Do use Rose Ink (#B23A50) for every link and any rose text at or below 16px.",
+      "Do build every shadow and scrim from rgba(110, 103, 107, …).",
+      "Do show focus as a 2px Mia Rose outline on controls, or a Mia Rose border plus a 3px Blush 100 halo on fields.",
+      "Do keep touch targets at 44px minimum and primary actions at 48px.",
+      "Do limit motion to the step rise-in (260ms), sheet slide-up (300ms) and success tick draw (500ms) on cubic-bezier(.2, .8, .2, 1), and collapse all of it under prefers-reduced-motion.",
+      "Do switch to a bottom sheet below 600px and respect the safe-area inset in the footer."
+    ],
+    "donts": [
+      "Don't use any dark colour: no dark backgrounds, dark surfaces, black scrims or black shadows. Nothing darker than Mauve Text (#4A4447), and that only as text.",
+      "Don't set body-size text in Mia Rose on white; it misses AA.",
+      "Don't introduce a second accent hue for selection or emphasis.",
+      "Don't use Newsreader for labels, buttons, chips or legal copy.",
+      "Don't use square or small-radius buttons; actions are always 999px pills.",
+      "Don't put drop shadows on fields, chips, pills or cards.",
+      "Don't pre-tick any consent checkbox or make consent a condition of the primary action.",
+      "Don't use Mauve Faint (#8F888C) for readable copy; it is for placeholders and disabled states only."
+    ]
+  }
+}

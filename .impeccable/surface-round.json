@@ -1,0 +1,60 @@
+{
+  "title": "Mia login & consent: choose the layout",
+  "question": "Your brand colours and type stay fixed. Pick the layout for the sign-in, sign-up and consent flow. All three are fully responsive.",
+  "options": [
+    {
+      "id": "conversational",
+      "label": "Conversational concierge",
+      "kicker": "THE ROLL",
+      "thesis": "Mia asks one short question at a time, and your answers stack up like a quiet boutique conversation.",
+      "palette": ["#D14A61", "#FFFFFF", "#F6F4F5", "#8A8588"],
+      "materials": ["serif prompts, sans answers", "answered steps collapse into editable chips"],
+      "viewport": "A sheet with 'Hi, what's your mobile number?' in serif, one field and one pink CTA. Earlier answers sit above it as tappable chips.",
+      "risk": "The profile and consent step has a lot of copy, which can break the one-question rhythm and feel slow on desktop.",
+      "wireframe": {"cols": 12, "rows": 12, "regions": [
+        {"label": "brand + close", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "answered: +91 98•• ✓", "x": 5, "y": 2, "w": 7, "h": 1},
+        {"label": "answered: OTP ✓", "x": 5, "y": 3, "w": 7, "h": 1},
+        {"label": "Mia asks: What should we call you?", "x": 0, "y": 5, "w": 9, "h": 2},
+        {"label": "input", "x": 0, "y": 7, "w": 12, "h": 2},
+        {"label": "Continue", "x": 0, "y": 10, "w": 12, "h": 2, "accent": true}
+      ]}
+    },
+    {
+      "id": "stepper-drawer",
+      "label": "Stepped side drawer",
+      "thesis": "A right-hand drawer on desktop and a full-height sheet on mobile, with a thin progress rail and one clear task per step. Preferences gets its own final step.",
+      "palette": ["#D14A61", "#FFFFFF", "#F6F4F5", "#8A8588"],
+      "materials": ["hairline progress rail", "grouped channel chips", "sticky bottom CTA"],
+      "viewport": "The page stays visible behind a 440px drawer. The rail reads Mobile, Verify, Details, Preferences. The CTA is pinned to the bottom so the keyboard never hides it.",
+      "risk": "Four visible steps make sign-up look longer than it is. Returning users only see two of them.",
+      "wireframe": {"cols": 12, "rows": 12, "regions": [
+        {"label": "storefront (dimmed)", "x": 0, "y": 0, "w": 7, "h": 12},
+        {"label": "progress rail", "x": 7, "y": 0, "w": 5, "h": 1, "accent": true},
+        {"label": "Step title", "x": 7, "y": 1, "w": 5, "h": 2},
+        {"label": "fields / channel chips", "x": 7, "y": 3, "w": 5, "h": 5},
+        {"label": "consent + legal", "x": 7, "y": 8, "w": 5, "h": 2},
+        {"label": "sticky CTA", "x": 7, "y": 10, "w": 5, "h": 2, "accent": true}
+      ]}
+    },
+    {
+      "id": "compact-card",
+      "label": "Compact typographic card",
+      "thesis": "A small centred card with no photo. Serif title, generous white space, and consent in the details step as a tidy expandable group.",
+      "palette": ["#D14A61", "#FFFFFF", "#F6F4F5", "#8A8588"],
+      "materials": ["single card, 420px max", "OTP fills inline in the same card"],
+      "viewport": "A white card centred on a soft grey veil showing the logo, 'Sign in or sign up', the phone field and a pink Send OTP button. The card resizes smoothly between steps.",
+      "risk": "Without the promo image the ₹500 offer has less pull. It needs a small offer ribbon to keep it.",
+      "wireframe": {"cols": 12, "rows": 12, "regions": [
+        {"label": "veil", "x": 0, "y": 0, "w": 12, "h": 12},
+        {"label": "logo + title", "x": 3, "y": 2, "w": 6, "h": 2},
+        {"label": "phone / OTP (morphs)", "x": 3, "y": 4, "w": 6, "h": 2},
+        {"label": "▸ Communication preferences", "x": 3, "y": 6, "w": 6, "h": 2},
+        {"label": "CTA", "x": 3, "y": 8, "w": 6, "h": 1, "accent": true},
+        {"label": "legal line", "x": 3, "y": 9, "w": 6, "h": 1}
+      ]}
+    }
+  ],
+  "reroll": true,
+  "steer": true
+}
