@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=29">
+  <link rel="stylesheet" href="styles.css?v=30">
 </head>
 <body>
   <div id="storefront">
@@ -83,6 +83,12 @@
 
   <!-- Demo-only controls: not part of the production design -->
   <aside class="demo" id="demo" aria-label="Prototype test scenarios">
+    <div class="demo__screens">
+      <label class="demo__screens-label" for="screenSel">Screen</label>
+      <button type="button" class="demo__nav" id="screenPrev" aria-label="Previous screen">‹</button>
+      <select id="screenSel"></select>
+      <button type="button" class="demo__nav" id="screenNext" aria-label="Next screen">›</button>
+    </div>
     <details>
       <summary>Test scenarios</summary>
       <div class="demo__body">
@@ -104,6 +110,6 @@
     </details>
   </aside>
 
-  <script src="app.js?v=16"></script>
+  <script src="app.js?v=18"></script>
 </body>
 </html>
