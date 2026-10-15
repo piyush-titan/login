@@ -1,0 +1,61 @@
+flowchart TD
+  A([Customer taps Login]) --> B{Number saved by<br/>Remember me in<br/>this browser?}
+  B -- Yes --> C1[Screen 1 · Mobile number<br/>number pre-filled]
+  B -- No --> C2[Screen 1 · Mobile number<br/>empty]
+  C1 --> D[Customer enters or edits number<br/>ticks consent boxes if they want<br/>all boxes start unticked<br/>Remember me ticked by default]
+  C2 --> D
+  D --> E{Number valid?<br/>10 digits, starts 6-9}
+  E -- No --> E1[/Inline error under the field/] --> D
+  E -- Yes --> E2{Marketing ticked but<br/>no channel chosen?}
+  E2 -- Yes --> E3[/Error: choose at least one way<br/>or untick marketing/] --> D
+  E2 -- No --> F[Tap Get OTP]
+  F --> F1{Server reachable?}
+  F1 -- No --> F2[/Network error, stay on Screen 1/] --> D
+  F1 -- Yes --> G{Number blocked?<br/>5 wrong codes<br/>in last 24 h}
+  G -- Yes --> G1[OTP screen · Blocked<br/>countdown up to 24:00:00<br/>code box disabled]
+  G1 -. Back .-> D
+  G -- No --> H[Screen 2 · Enter OTP<br/>6 digits, valid 5 min<br/>Resend after 30 s, max 3]
+  H --> I{Code check}
+  I -- Fewer than 6 digits --> I1[/Enter all 6 digits/] --> H
+  I -- Expired --> I2[/Code expired, tap Resend/] --> H
+  I -- Wrong, attempts left --> I3[/That code isn't right · N attempts left/] --> H
+  I -- 5th wrong code --> G1
+  I -- Correct --> J{Account exists<br/>for this number?}
+  H -. Back .-> D
+
+  J -- Yes --> K[Send consent ticked on Screen 1<br/>only if something was ticked]
+  K --> S1([Welcome back · signed in])
+
+  J -- No --> L[Screen 3 · Create account<br/>Title Zoya only, first name,<br/>last name, email]
+  L --> L1{Fields valid?}
+  L1 -- No --> L2[/Inline errors or email typo suggestion/] --> L
+  L1 -- Yes --> M{Email already used by<br/>another account?}
+  M -- No --> N[Create account + send consent<br/>from Screen 1]
+  N --> S2([Your account is ready])
+  M -- Yes --> P[Screen 4 · Email linked to<br/>another account]
+  P -- Use a different email --> L
+  P -- Sign in with the other number --> Q[OTP to that number<br/>same OTP rules]
+  Q --> S3([Signed in to the existing account])
+  P -- Use this email for new account --> R[OTP to the email<br/>same OTP rules]
+  R --> R1[Create account, email moves<br/>to it + send consent]
+  R1 --> S4([Your account is ready])
+
+  S1 --> Z{Remember me ticked?}
+  S2 --> Z
+  S3 --> Z
+  S4 --> Z
+  Z -- Yes --> Z1[Save only the mobile number<br/>in this browser]
+  Z -- No --> Z2[Remove the saved number<br/>if it was this one]
+
+  classDef start fill:#FBE9EC,stroke:#D14A61,color:#3a3a3a
+  classDef screen fill:#ffffff,stroke:#D14A61,color:#3a3a3a
+  classDef decision fill:#F5F5F5,stroke:#9a9a9a,color:#3a3a3a
+  classDef err fill:#FFF4F5,stroke:#E39AA7,color:#7a3a46
+  classDef ok fill:#EEF7F0,stroke:#7DB38A,color:#2f5a3a
+  classDef block fill:#FFF4F5,stroke:#D14A61,color:#7a3a46,stroke-width:2px
+  class A start
+  class C1,C2,D,F,H,L,P,Q,R,K,N,R1,Z1,Z2 screen
+  class B,E,E2,F1,G,I,J,L1,M,Z decision
+  class E1,E3,F2,I1,I2,I3,L2 err
+  class S1,S2,S3,S4 ok
+  class G1 block
